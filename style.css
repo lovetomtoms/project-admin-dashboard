@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    /* height: 100vh; */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: 
+    "s s h h h h h h h h h h"
+    "s s m m m m m m m m m m";
+}
+
+.header {
+    grid-area: h;
+    z-index: 1;
+    box-shadow: 0 2px 5px lightgrey;
+}
+
+.sidebar {
+    grid-area: s;
+    background-color: #0284c7;
+    padding: 20px;
+}
+
+.main {
+    grid-area: m;
+}
+
+.header-top {
+    padding: 20px 40px 10px 40px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.header-top-left {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-top-left svg {
+    width: 20px;
+    justify-self: center;
+}
+
+.header-top-left input {
+    width: 80%;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 30px;
+    border-style: none;
+    background-color: #e5e7eb;
+    outline: none;
+    padding-left: 10px;
+}
+
+.header-top-left input:focus {
+    border: 2px solid #0284c7;
+}
+
+.header-top-right {
+    display: grid;
+    grid-template-columns: 50px 50px 120px;
+    align-items: center;
+    justify-content: end;
+    gap: 30px;
+}
+
+.header-top-right img {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    background-color: yellow;
+    border-radius: 50%;
+    border-style: none;
+}
+
+.header-top-right svg {
+    width: 20px;
+    justify-self: end;
+}
+
+.header-top-right span {
+    width: 120px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.header-bottom {
+    padding: 10px 40px 20px 40px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.header-bottom-left {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    column-gap: 15px;
+}
+
+.header-bottom-left img {
+    grid-row: span 2;
+    width: 70px;
+    height: 70px;
+    background-color: yellow;
+    border-radius: 50px;
+    border-style: none;
+    padding: 10px;
+}
+
+.header-bottom-left .small {
+    grid-column: 2;
+    font-weight: 700;
+    align-self: center;
+}
+
+.header-bottom-left .big {
+    grid-column: 2;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.header-bottom-right {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: end;
+}
+
+.header-bottom-right button {
+    height: 40px;
+    width: 100px;
+    border-style: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    background-color: #0284c7;
+}
+
+.sidebar-title svg {
+    width: 35px;
+}
+
+.sidebar-title path {
+    fill: white;
+}
+
+.sidebar-first-nav svg {
+    width: 20px;
+}
+
+.sidebar-first-nav path {
+    fill: white;
+}
+
+
+.sidebar-second-nav svg {
+    width: 20px;
+}
+
+.sidebar-second-nav path {
+    fill: white;
+}
+
+.sidebar-title a {
+    display: grid;
+    grid-template-columns: 35px 1fr;
+    justify-items: center;
+    gap: 20px;
+    text-decoration: none;
+    margin-bottom: 50px;
+}
+
+.sidebar-title span {
+    justify-self: start;
+    align-self: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.sidebar-first-nav {
+    margin-bottom: 50px;
+}
+
+.sidebar-first-nav a,
+.sidebar-second-nav a {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    justify-items: start;
+    gap: 20px;
+    text-decoration: none;
+}
+
+.sidebar-first-nav span,
+.sidebar-second-nav span {
+    justify-self: start;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.sidebar-first-nav li,
+.sidebar-second-nav li {
+    list-style-type: none;
+}
+
+.sidebar-first-nav ul,
+.sidebar-second-nav ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 30px 20px 0 20px;
+    background-color: #e5e7eb;
+    column-gap: 20px;
+    row-gap: 40px;
+}
+
+.main .main-projects {
+    grid-row: span 2;
+}
+
+.main .main-announce {
+    grid-column: 2;
+}
+
+.main .main-trending {
+    grid-column: 2;
+}
+
+.main .title {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.main .project-title {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.main .projects {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    background-color: white;
+    gap: 5px;
+    border-left: 7px solid orange;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px lightgrey;
+}
+
+.main .projects-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.main .dummy-button {
+    display: grid;
+    grid-template-columns: repeat(3, 20px);
+    gap: 20px;
+    justify-content: end;
+    margin-top: 20px;
+}
+
+.main .dummy-button svg {
+    width: 20px;
+}
+
+.main .announce-container {
+    padding: 10px 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px lightgrey;
+}
+
+.main .announcement {
+    padding: 20px 0;
+}
+
+.announcement .big {
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.main .trend-profile {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    column-gap: 15px;
+}
+
+.trend-profile img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    border-style: none;
+    /* background-color: red; */
+    padding: 10px;
+    grid-row: span 2;
+}
+
+.trend-profile .nickname {
+    grid-column: 2;
+    font-weight: 700;
+    font-size: 1rem;
+    align-self: end;
+}
+
+.trend-profile .position {
+    grid-column: 2;
+}
+
+.main .trending-container {
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px lightgrey;
+}
+
+.trend-profile:nth-child(1)>img {
+    background-color: yellow;
+}
+
+.trend-profile:nth-child(2)>img {
+    background-color: blue;
+}
+
+.trend-profile:nth-child(3)>img {
+    background-color: green;
+}
+
+.trend-profile:nth-child(4)>img {
+    background-color: red;
+}
